@@ -123,7 +123,17 @@ footer.site-footer .wrap { display: flex; flex-direction: column; gap: 8px; font
 .detail-gallery .thumbs img {
   width: 72px; height: 72px; object-fit: contain; border-radius: 10px;
   padding: 6px; background: var(--card-bg); box-shadow: 0 3px 10px rgba(74,53,39,0.08);
+  cursor: pointer; border: 2px solid transparent; transition: border-color 0.15s;
 }
+.detail-gallery .thumbs img.active,
+.detail-gallery .thumbs img:hover { border-color: var(--accent); }
+
+.lightbox-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(30,20,14,0.85);
+  z-index: 999; align-items: center; justify-content: center; padding: 40px; cursor: zoom-out;
+}
+.lightbox-overlay.open { display: flex; }
+.lightbox-overlay img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 8px; }
 .detail-info h1 { font-size: 27px; font-weight: 500; margin: 0 0 8px; }
 .detail-info .en-name { font-size: 13px; color: var(--accent2); margin-bottom: 20px; }
 .detail-info .story {
