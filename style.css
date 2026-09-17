@@ -1,0 +1,152 @@
+/* 風格三：滿意家溫暖敘事 — 暖米/陶土色調、圓角卡片、家庭陪伴語氣 */
+
+:root {
+  --bg: #fbf3ea;
+  --bg-alt: #f3e4d3;
+  --ink: #4a3527;
+  --ink-soft: #8a7361;
+  --line: #e8d6c0;
+  --accent: #c17a4e;
+  --accent2: #9c8f4e;
+  --card-bg: #fffdfa;
+  --max-w: 1040px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+/* ---- nav ---- */
+header.site-nav { background: var(--bg); }
+header.site-nav .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 24px; padding-bottom: 24px;
+}
+.brand-logo { display: flex; align-items: center; gap: 12px; font-size: 19px; letter-spacing: 0.06em; }
+.brand-logo img { height: 38px; width: auto; border-radius: 50%; }
+nav.main-links { display: flex; gap: 30px; font-size: 14px; color: var(--ink-soft); }
+nav.main-links a:hover { color: var(--accent); }
+
+/* ---- hero ---- */
+.hero { padding: 40px 0 72px; }
+.hero .wrap {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center;
+}
+.hero-copy .eyebrow { font-size: 14px; color: var(--accent); margin-bottom: 14px; }
+.hero-copy h1 {
+  font-size: 32px; font-weight: 500; line-height: 1.6; margin: 0 0 20px; color: var(--ink);
+}
+.hero-copy p { color: var(--ink-soft); font-size: 15.5px; margin-bottom: 30px; max-width: 44ch; }
+.btn {
+  display: inline-block; padding: 15px 38px; background: var(--accent); color: #fffdfa;
+  font-size: 14px; border-radius: 999px; box-shadow: 0 6px 16px rgba(193,122,78,0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(193,122,78,0.32); }
+.hero-image {
+  background: var(--card-bg); border-radius: 24px; padding: 30px;
+  box-shadow: 0 12px 30px rgba(74,53,39,0.1);
+}
+.hero-image img { border-radius: 12px; }
+
+/* ---- story strip ---- */
+.philosophy {
+  background: var(--bg-alt);
+  padding: 60px 0;
+  text-align: center;
+  border-radius: 32px;
+  margin: 0 24px 56px;
+}
+.philosophy .wrap { max-width: 620px; }
+.philosophy p { font-size: 16.5px; color: var(--ink); line-height: 2.1; }
+.philosophy .sign { margin-top: 22px; font-size: 13px; color: var(--accent2); letter-spacing: 0.08em; }
+
+/* ---- footer ---- */
+footer.site-footer { padding: 40px 0; margin-top: 20px; }
+footer.site-footer .wrap { display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: var(--ink-soft); }
+
+/* ---- products listing ---- */
+.page-title { padding: 48px 0 8px; }
+.page-title h1 { font-size: 25px; font-weight: 500; }
+.page-title p { color: var(--ink-soft); font-size: 14px; }
+
+.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; padding: 32px 0 64px; }
+.product-card {
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 20px;
+  display: flex; flex-direction: column;
+  box-shadow: 0 6px 18px rgba(74,53,39,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.product-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(74,53,39,0.12); }
+.product-card .thumb {
+  aspect-ratio: 1/1; border-radius: 12px; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg-alt); margin-bottom: 16px;
+}
+.product-card .thumb img { max-height: 100%; object-fit: contain; }
+.product-card h3 { font-size: 16px; font-weight: 500; margin: 0 0 8px; }
+.product-card .highlight { font-size: 13px; color: var(--ink-soft); flex-grow: 1; }
+.product-card .placeholder-badge {
+  display: inline-block; margin-top: 10px; font-size: 11px; color: var(--accent);
+  border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; align-self: flex-start;
+}
+.product-card .card-link {
+  margin-top: 14px; font-size: 13px; color: var(--accent);
+  border-top: 1px solid var(--line); padding-top: 12px;
+}
+
+/* ---- product detail ---- */
+.breadcrumb { padding: 24px 0 0; font-size: 13px; color: var(--ink-soft); }
+.detail { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; padding: 32px 0 64px; }
+.detail-gallery .main-img {
+  border-radius: 20px; background: var(--card-bg); padding: 26px; margin-bottom: 16px;
+  box-shadow: 0 10px 26px rgba(74,53,39,0.1);
+}
+.detail-gallery .main-img img { border-radius: 10px; }
+.detail-gallery .thumbs { display: flex; gap: 12px; }
+.detail-gallery .thumbs img {
+  width: 72px; height: 72px; object-fit: contain; border-radius: 10px;
+  padding: 6px; background: var(--card-bg); box-shadow: 0 3px 10px rgba(74,53,39,0.08);
+}
+.detail-info h1 { font-size: 27px; font-weight: 500; margin: 0 0 8px; }
+.detail-info .en-name { font-size: 13px; color: var(--accent2); margin-bottom: 20px; }
+.detail-info .story {
+  font-size: 14.5px; color: var(--ink-soft); margin-bottom: 26px; line-height: 2;
+}
+.spec-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 28px; }
+.spec-table tr { border-bottom: 1px solid var(--line); }
+.spec-table th, .spec-table td { text-align: left; padding: 12px 0; vertical-align: top; }
+.spec-table th { width: 100px; color: var(--ink-soft); font-weight: 400; }
+.cert-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+.cert-badges span {
+  font-size: 12px; border-radius: 999px; padding: 6px 14px;
+  background: var(--bg-alt); color: var(--accent2);
+}
+
+@media (max-width: 760px) {
+  .hero .wrap { grid-template-columns: 1fr; gap: 32px; }
+  .hero-copy h1 { font-size: 26px; }
+  .philosophy { margin: 0 12px 40px; border-radius: 22px; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .detail { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .product-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .wrap { padding: 0 16px; }
+}
