@@ -102,8 +102,8 @@ footer.site-footer .wrap { display: flex; flex-direction: column; gap: 8px; font
 .product-card .thumb img { max-height: 100%; object-fit: contain; }
 .product-card h3 { font-size: 16px; font-weight: 500; margin: 0 0 8px; }
 .product-card .highlight { font-size: 13px; color: var(--ink-soft); flex-grow: 1; }
-.product-card .placeholder-badge {
-  display: inline-block; margin-top: 10px; font-size: 11px; color: var(--accent);
+.placeholder-badge {
+  display: inline-block; margin-top: 10px; margin-bottom: 16px; font-size: 11px; color: var(--accent);
   border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; align-self: flex-start;
 }
 .product-card .card-link {
